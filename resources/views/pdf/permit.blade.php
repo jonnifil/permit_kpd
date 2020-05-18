@@ -9,6 +9,7 @@
                     <p>Дата заказа пропуска: {{ $permit->created_at->format('d.m.Y') }}</p>
                     <p>Дата посещения: {{ date('d.m.Y', strtotime($permit->visit)) }}</p>
                     <p>ФИО: {{ $permit->user->name }}</p>
+                    <p><img style="width: 150px" src="https://qrcode.tec-it.com/API/QRCode?data=Разовый пропуск № {{ $permit->id }} {{ $permit->user->name }} {{ date('d.m.Y', strtotime($permit->visit)) }}" /></p>
                 </div>
             </div>
         </div>
